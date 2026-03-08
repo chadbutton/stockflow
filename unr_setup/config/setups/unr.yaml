@@ -1,0 +1,35 @@
+# UnR (Undercut and Run) — Gil Morales + The Strat 2-1-2
+# Generic criteria fields + setup_specific used by the UnR evaluator.
+
+setup_id: unr
+name: UnR (Undercut and Run)
+version: "1.0"
+timeframes:
+  - "1D"
+  - "65min"
+
+entry:
+  type: reversal_signal
+  pattern: strat_212
+
+stop:
+  type: range_low   # inside bar low (long) or high (short)
+
+conditions: []
+
+# UnR-specific: interpreted by unr_daily + evaluator
+setup_specific:
+  daily_emas: [ 20, 50, 200 ]
+  pullback_days_min: 3
+  slope_lookback: 5
+  atr_period: 14
+  atr_mult: 1
+  rising_days_min: 3
+  trigger_timeframe: "65min"
+  # All Strat reversal patterns for 65min trigger (try in order; first match wins)
+  strat_reversal_patterns:
+    - "2-1-2"
+    - "2-2"
+    - "1-2-2"
+    - "3-1-2"
+    - "1-3"

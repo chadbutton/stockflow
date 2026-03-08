@@ -1,0 +1,5 @@
+# Optional: install deps into a venv without editable packages.
+# For editable install use INSTALL.md (pip install -e unr_setup then -e backend).
+
+setuptools>=61.0
+yfinance>=0.2.0

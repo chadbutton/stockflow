@@ -1,0 +1,21 @@
+{
+  "setup_id": "unr",
+  "name": "UnR (Undercut and Run)",
+  "version": "1.0",
+  "timeframes": ["1D", "65min"],
+  "entry": { "type": "reversal_signal", "pattern": "strat_reversals" },
+  "stop": { "type": "range_low" },
+  "conditions": [],
+  "setup_specific": {
+    "daily_emas": [20, 50, 200],
+    "use_sma_periods": [50, 200],
+    "pullback_days_min": 3,
+    "slope_lookback": 5,
+    "require_ma_slope": false,
+    "atr_period": 14,
+    "atr_mult": 1,
+    "rising_days_min": 3,
+    "trigger_timeframe": "65min",
+    "strat_reversal_patterns": ["2-1-2", "2-2", "1-2-2", "3-1-2", "1-3"]
+  }
+}

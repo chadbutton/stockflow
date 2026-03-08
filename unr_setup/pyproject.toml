@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["unr_setup*"]
+
+[project]
+name = "unr-setup"
+version = "0.1.0"
+description = "UnR (Undercut and Run) setup: daily EMA context + 65min Strat 2-1-2 trigger, with persistence and score 0-100."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+yaml = ["pyyaml>=6.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

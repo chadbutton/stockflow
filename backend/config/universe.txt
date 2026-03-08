@@ -1,0 +1,4 @@
+# Sample universe: one symbol per line. Use your own list or export from screener.
+# AAPL
+# MSFT
+# GOOGL
